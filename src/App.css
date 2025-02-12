@@ -1,0 +1,105 @@
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffefe0;
+  overflow: hidden;
+  margin: 0;
+  user-select: none; /* Evita que se seleccione el texto */;
+
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #d64d4d;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.button-group {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 18px;
+  margin: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+}
+
+.yes {
+  background-color: #ff7f7f;
+  color: white;
+}
+
+.no {
+  background-color: #bbbbbb;
+  color: black;
+}
+
+p {
+  margin-top: 20px;
+  font-size: 24px;
+  color: #d64d4d;
+}
+
+/* Animación de caída */
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .button {
+    font-size: 1em;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .button {
+    font-size: 0.9em;
+    padding: 6px 12px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+}
